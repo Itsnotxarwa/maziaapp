@@ -46,13 +46,13 @@ export default function HeroSection() {
                                 </div>
                                 </Fade>
                             </div>
-                            <div className="hidden lg:block relative ">
-                                <div className="fixed overflow-hidden pointer-events-none">
-                                    <div className="absolute top-0.5 left-[5%] w-160 h-110 bg-[#A068C1] blur-3xl"></div>
-                                    <div className="absolute top-0.5 right-[5%] w-160 h-110 bg-[#BD3E69] blur-3xl delay-1000"></div>
+                            <div className="hidden lg:block relative">
+                                <div className="overflow-hidden pointer-events-none">
+                                    <div className="absolute top-0.5 left-[5%] w-160 h-100 bg-[#A068C1] blur-3xl animate-pulse"></div>
+                                    <div className="absolute top-0.5 right-[5%] w-160 h-100 bg-[#BD3E69] blur-3xl delay-1000 animate-pulse"></div>
                                 </div>
-                                <div className=" flex items-center justify-center relative ">
-                                <img src={DashboardImage} alt="dashboard" className="max-w-5xl rounded-2xl" />
+                                <div className="relative  flex items-center justify-center">
+                                <img src={DashboardImage} alt="dashboard" className="max-w-4xl rounded-2xl" />
                                 </div>
                             </div>
                         </div>
