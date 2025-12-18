@@ -5,6 +5,7 @@ import HeroSection from "./HomeComponents/heroSection";
 import UsageExamples from "./HomeComponents/UsageExamples";
 import QuestionsSection from "./HomeComponents/QuestionsSection";
 import Footer from "./Footer";
+import FeaturesSection from "./HomeComponents/FeaturesSection";
 
 
 
@@ -15,7 +16,7 @@ export default function HomePage() {
             <Header />
             <HeroSection />
             <BenefitsSection />
-            <UsageExamples />
+            <FeaturesSection />
             <QuestionsSection />
             <Footer />
         </div>

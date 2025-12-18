@@ -10,16 +10,16 @@ export default function HeroSection() {
                             <div className="flex flex-col justify-center items-center">
                                 <div className="flex flex-col items-center justify-center">
                                     <Fade direction="up" triggerOnce duration={800}>
-                                    <h1 className="text-5xl md:text-6xl lg:text-6xl font-bold mb-8 text-center mx-8 lg:mx-16" 
+                                    <h1 className="text-5xl md:text-6xl font-bold mb-8 text-center mx-8 lg:mx-16 tracking-tight space-y-1" 
                                     >
                                         Atteignez {" "}
-                                            les plus hauts standards
+                                        <span className="bg-linear-to-r from-white to-white/70 bg-clip-text text-transparent"> les plus hauts standards</span>   
                                         {" "} téléphoniques grâce à l’IA
                                         
                                     </h1>
                                     </Fade>
                                     <Fade direction="up" triggerOnce duration={800} delay={200}>
-                                    <p className="text-xl text-white max-w-xl text-center">
+                                    <p className="text-lg tracking-tight text-white/60 max-w-xl text-center">
                                         Gagnez du temps, réduisez les coûts et améliorez chaque conversation grâce à une IA conçue pour performer.
                                     </p>
                                     </Fade>
