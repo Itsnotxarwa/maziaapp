@@ -1,0 +1,29 @@
+import { Mail } from 'lucide-react';
+
+export default function Footer() {
+    return(
+        <footer className="border-t border-white/10 backdrop-blur-xl bg-black/80 z-50 relative pt-16 pb-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="grid md:grid-cols-2">
+                    <div className='space-y-6'>
+                        <h1 className="text-black font-bold text-lg hover:opacity-80 transition-opacity">Mazia</h1>
+                        <p className='text-lg leading-relaxed max-w-md'>Optimisez votre standard téléphonique : des IA qui saisissent chaque opportunité.</p>
+                    </div>
+                    <div className='space-y-6'>
+                        <h3 className='text-xl font-semibold mb-4'>Nous contacter</h3>
+                        <div className='flex gap-1 items-center'>
+                            <div className='w-8 h-8 bg-gray-100 backdrop-blur-sm rounded-lg flex items-center 
+                            justify-center border border-gray-300'>
+                                <Mail className='text-black' strokeWidth={1} />
+                            </div>
+                            <p className='hover:underline'>contact@mazia.fr</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="border-t border-gray-50/50 flex mt-12 pt-8 justify-center items-center">
+                2025 MAZIA. Tous droits réservés.
+                </div>
+            </div>
+        </footer>
+    )
+}
