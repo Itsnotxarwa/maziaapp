@@ -9,7 +9,7 @@ export default function Header() {
                         <div className="flex justify-between items-center py-4">
                             <Link to="/">
                             <div>
-                                <h1 className="text-white font-bold text-lg">Mazia</h1>
+                                <h1 className="text-white font-bold text-lg tracking-tighter">Mazia</h1>
                             </div>
                             </Link>
                             <div>
