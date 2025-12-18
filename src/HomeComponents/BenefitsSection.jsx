@@ -84,7 +84,7 @@ export default function BenefitsSection() {
                   key={i}
                   className="h-78 md:h-69 lg:h-80 p-8 text-left relative z-10 rounded-lg shadow-sm 
                   bg-white border border-white/10 transition-all duration-500
-                  overflow-hidden flex flex-col justify-center"
+                  overflow-hidden flex flex-col justify-center hover:scale-95"
                 >
                   <div className="flex justify-start mb-6 text-black">
                     <GradientIcon Icon={Icon} id={i} />

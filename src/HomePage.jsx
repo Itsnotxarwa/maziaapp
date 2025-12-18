@@ -14,9 +14,7 @@ export default function HomePage() {
         <div className="min-h-screen bg-black/90 text-white overflow-hidden">
             <Header />
             <HeroSection />
-            <Slide triggerOnce direction="up">
             <BenefitsSection />
-            </Slide>
             <UsageExamples />
             <QuestionsSection />
             <Footer />
