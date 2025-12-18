@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 import { benefits } from "../data/BenefitsData";
-import { Slide } from "react-awesome-reveal";
 import GradientIcon from "../components/GradientIcon";
 
 export default function BenefitsSection() {
@@ -44,7 +43,6 @@ export default function BenefitsSection() {
 
     return(
         <section className="relative pt-24 pb-32">
-          <Slide triggerOnce cascade direction="right" duration={1000}>
             <div className="mb-6 hidden lg:flex justify-end gap-2  pr-8 sm:pr-6 lg:pr-16">
             <button
               onClick={prevSlide}
@@ -61,9 +59,7 @@ export default function BenefitsSection() {
             <ChevronRight />
             </button>
           </div>
-          </Slide>
             <div className="max-w-7xl mx-auto px-8 sm:px-6 lg:px-16 flex flex-col lg:flex-row gap-8">
-              <Slide triggerOnce cascade direction="left" duration={1000}>
                 <div className="flex flex-col lg:w-[350px]">
                     <h2 className="text-xl uppercase text-gray-50/50 mb-4">Pourquoi choisir Mazia ?</h2>
                     <h2 className="text-2xl text-white font-medium mb-8 text-center">
@@ -73,8 +69,6 @@ export default function BenefitsSection() {
                     Mazia n’est pas seulement un outil d’automatisation : c’est un véritable levier stratégique qui révolutionne la gestion des appels commerciaux et l’expérience client.
                     </p>
                 </div>
-                </Slide>
-                <Slide triggerOnce cascade direction="right" duration={1000}>
                 <div className="flex-1">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {visibleCards.map((item, i) => {
@@ -89,14 +83,13 @@ export default function BenefitsSection() {
                   <div className="flex justify-start mb-6 text-black">
                     <GradientIcon Icon={Icon} id={i} />
                   </div>
-                  <h3 className="text-xl font-semibold mb-4 bg-linear-to-r from-[#A068C1] to-[#BD3E69] text-transparent bg-clip-text">{item.title}</h3>
+                  <h3 className="text-xl font-semiboldmb-4 bg-linear-to-r from-[#A068C1] to-[#BD3E69] text-transparent bg-clip-text">{item.title}</h3>
                   <p className="text-black/70">{item.description}</p>
                 </div>
               );
             })}
           </div>
           </div>
-          </Slide>
         </div>
          <div className="mt-8 lg:hidden mb-6 flex justify-center gap-2  pr-8 sm:pr-6 lg:pr-16">
             <button

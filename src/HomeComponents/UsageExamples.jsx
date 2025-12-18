@@ -15,7 +15,7 @@ export default function UsageExamples() {
                             </h2>
                         </Fade>
                         
-                            <div className="grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 gap-8">
+                            <div className="grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 gap-8 mx-8">
                                 {usageData.map((item, i) => (
                                     <Fade triggerOnce direction="up" duration={800} delay={400}>
                                     <div key={i} className="group flex items-start justify-center">
