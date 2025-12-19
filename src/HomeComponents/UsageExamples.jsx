@@ -22,25 +22,32 @@ export default function UsageExamples() {
                             Mazia automatise et optimise vos appels, gère les demandes clients, qualifie les prospects et fournit des rapports clairs pour améliorer l’efficacité de votre entreprise.                        </p>
                         </Fade>
                         </div>
-                            <div className="grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 gap-8">
+                            <div className="grid mx-4 md-mx-6 grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 gap-8">
                                 {usageData.map((item, i) => (
-                                    <Fade triggerOnce direction="up" duration={800} delay={400}>
-                                    <div key={i} className="group flex items-start justify-center">
-                                        <div className="h-full flex items-center justify-center">
-                                            <Player
-                                            autoplay
-                                            loop
-                                            src={item.animation} 
-                                            style={{ height: `${item.size}px`, width: `${item.size}px`}}
-                                            ></Player>
+                                    <Fade key={i} triggerOnce direction="up" duration={800} delay={400}>
+                                        <div className="group flex flex-col space-y-2">
+                                            <div className="flex w-full space-x-4">
+                                                <Player
+                                                autoplay
+                                                loop
+                                                src={item.animation} 
+                                                style={{ height: `${item.size}px`, width: `${item.size}px` }}
+                                                />
+                                            <h3 className="text-xl font-semibold text-gray-50
+                                            group-hover:text-transparent 
+                                            group-hover:bg-clip-text 
+                                            group-hover:bg-linear-to-r 
+                                            group-hover:from-[#BD3E69] 
+                                            group-hover:via-[#A068C1] 
+                                            group-hover:to-[#BD3E69] 
+                                            transition-colors duration-300 tracking-tight">
+                                                {item.title}
+                                            </h3>
                                         </div>
-                                        <div className="ml-4 text-left">
-                                            <h3 className="text-xl font-semibold text-gray-50 mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-[#BD3E69] group-hover:via-[#A068C1] group-hover:to-[#BD3E69] transition-colors duration-300">{item.title}</h3>
-                                            <p className="text-gray-50/50 leading-relaxed">{item.description}</p>
-                                        </div>
+                                        <p className="text-gray-50/50 text-left tracking-tight leading-relaxed">{item.description}</p>
                                     </div>
-                                    </Fade>
-                                ))}
+                                </Fade>
+                            ))}
                             </div>
                         
                     </div>
