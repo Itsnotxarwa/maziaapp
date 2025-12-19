@@ -8,13 +8,20 @@ export default function UsageExamples() {
         <section className="relative py-24">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
-                        <h2 className="text-xl uppercase text-white mb-4">Cas d’usage</h2>
+                        <div className="space-y-4 mb-20">
                         <Fade triggerOnce direction="up" duration={800} delay={200}>
-                            <h2 className="mb-16 font-bold text-3xl text-white sm:text-4xl 
-                            md:text-5xl lg:text-6xl leading-tight">Comment Mazia peut transformer vos appels
+                        <h2 className="text-xl uppercase text-white/60 mb-4">Cas d’usage</h2>
+                        </Fade>
+                        <Fade triggerOnce direction="up" duration={800} delay={200}>
+                            <h2 className="mb-8 font-medium text-3xl text-white md:text-4xl 
+                            leading-tight tracking-tight">Comment Mazia peut transformer vos appels
                             </h2>
                         </Fade>
-                        
+                        <Fade triggerOnce direction="up" duration={800} delay={200}>
+                        <p className='mx-16 text-lg text-center text-white/60 mb-6 leading-tight tracking-tight'>
+                            Mazia automatise et optimise vos appels, gère les demandes clients, qualifie les prospects et fournit des rapports clairs pour améliorer l’efficacité de votre entreprise.                        </p>
+                        </Fade>
+                        </div>
                             <div className="grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 gap-8">
                                 {usageData.map((item, i) => (
                                     <Fade triggerOnce direction="up" duration={800} delay={400}>

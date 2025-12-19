@@ -5,6 +5,7 @@ import QuestionsSection from "./HomeComponents/QuestionsSection";
 import Footer from "./Footer";
 import FeaturesSection from "./HomeComponents/FeaturesSection";
 import { Slide } from "react-awesome-reveal";
+import UsageExamples from "./HomeComponents/UsageExamples";
 
 
 
@@ -18,6 +19,7 @@ export default function HomePage() {
             <Slide triggerOnce direction="up">
             <FeaturesSection />
             </Slide>
+            <UsageExamples />
             <QuestionsSection />
             <Footer />
         </div>

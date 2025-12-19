@@ -5,7 +5,7 @@ import TranscriptionCardVisual from "../components/TranscriptionCardVisual";
 export default function FeaturesSection() {
 
     return(
-        <section className="relative pt-24 pb-12">
+        <section className="relative py-24">
                 <div className="max-w-7xl mx-auto px-8 sm:px-6 lg:px-16">
                             <div className="flex items-center justify-center mb-20">
                                 <div className="space-y-4">
