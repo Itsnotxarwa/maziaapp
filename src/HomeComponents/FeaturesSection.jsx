@@ -1,4 +1,4 @@
-import { PhoneIncoming, PhoneOutgoing } from "lucide-react";
+import { ArrowRight, PhoneIncoming, PhoneOutgoing, Settings } from "lucide-react";
 import TranscriptionCardVisual from "../components/TranscriptionCardVisual";
 
 
@@ -16,7 +16,7 @@ export default function FeaturesSection() {
                                 </div>
                             </div>
                             <div className="flex-1 grid lg:grid-cols-2 md:grid-cols-2 gap-4">
-                                    <div className="border border-white/20 rounded-lg border-dashed group flex flex-col justify-between space-x-6 text-left p-6">
+                                    <div className="border border-white/20 border-dashed group flex flex-col justify-between space-y-6 text-left p-6">
                                         <div className="w-full">
                                             <h3 className="text-sm text-white font-semibold tracking-tighter">Gérez tous vos appels entrants et sortants en un seul endroit.</h3>
                                         </div>
@@ -35,7 +35,7 @@ export default function FeaturesSection() {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="max-w-3xl border border-white/20 rounded-lg border-dashed group flex flex-col space-x-6 text-left p-6">
+                                    <div className="max-w-3xl border border-white/20 border-dashed group flex flex-col space-y-6 text-left p-6">
                                         <div className="w-full">
                                             <h3 className="text-sm text-white font-semibold tracking-tighter">Transcriptions & rapports</h3>
                                             <p className="text-white/60 text-sm leading-snug">
@@ -43,6 +43,34 @@ export default function FeaturesSection() {
                                             </p>
                                         </div>
                                             <TranscriptionCardVisual />
+                                    </div>
+                                    <div className="max-w-3xl border border-white/20 border-dashed group flex flex-col space-y-6 items-start text-left p-6">
+                                    <div className="w-full">
+                                        <div className="flex items-center justify-center bg-linear-to-tr w-12 h-12 from-[#A068C1] to-[#BD3E69] rounded-full p-0.5">
+                                                <Settings />
+                                        </div>
+                                    </div>
+                                        <div className="w-full">
+                                            <h3 className="text-sm text-white font-semibold tracking-tighter">Personnalisation</h3>
+                                            <p className="text-white/60 text-sm leading-snug">
+                                                Scripts et flux adaptables à votre activité
+                                            </p>
+                                        </div>
+                                        <div className=" w-full">
+                                            <div className="loader">
+                                                <div className="line" /></div>
+                                            </div>
+                                    </div>
+                                    <div className="max-w-3xl mx-auto flex flex-col items-start justify-center text-left space-y-6 h-full">
+                                        <div className="space-y-4">
+                                            <p className="text-lg text-white/60 max-w-2xl tracking-tighter">Automatisez vos appels et suivez les performances en temps réel.</p>
+                                        </div>
+                                        <div>
+                                            <a href="" className="group flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2 rounded-xl font-medium transition-all text-sm cursor-pointer">
+                                                Essayez Mazia et transformez la gestion de vos appels
+                                                <ArrowRight size={18} className="transition duration-300 group-hover:translate-x-2" />
+                                            </a>
+                                        </div>
                                     </div>
                             </div>
                 </div>
