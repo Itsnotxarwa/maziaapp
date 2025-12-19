@@ -20,7 +20,7 @@ html::-webkit-scrollbar-thumb {
   position: relative;
   padding: 10px 20px;
   border-radius: 7px;
-  border: 1px solid #F2C14E;
+  border: 1px solid #BD3E69;
   font-size: 14px;
   font-weight: 600;
   background: transparent;
@@ -33,9 +33,9 @@ html::-webkit-scrollbar-thumb {
 }
 
 .button-connecter:hover {
-  background: #F2C14E;
+  background: linear-gradient(to right, #BD3E69, #A068C1, #BD3E69);
   color: white;
-  box-shadow: 0 0 30px 5px #F2C14E;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
