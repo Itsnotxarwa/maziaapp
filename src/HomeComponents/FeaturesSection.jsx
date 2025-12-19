@@ -9,6 +9,7 @@ export default function FeaturesSection() {
                 <div className="max-w-7xl mx-auto px-8 sm:px-6 lg:px-16">
                             <div className="flex items-center justify-center mb-20">
                                 <div className="space-y-4">
+                                    <h3 className="text-lg uppercase text-center text-white/60">Fonctionnalités Principales</h3>
                                 <h2 className="font-medium text-3xl md:text-4xl text-white mb-8 text-center tracking-tight">Mazia au service de votre entreprise</h2>
                                 <p className="text-lg text-center text-white/60 mb-6 leading-tight tracking-tight">
                                 Mazia combine l’intelligence vocale, la compréhension du langage naturel et des flux conversationnels optimisés pour gérer tous vos appels.

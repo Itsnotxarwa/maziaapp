@@ -4,6 +4,7 @@ import HeroSection from "./HomeComponents/heroSection";
 import QuestionsSection from "./HomeComponents/QuestionsSection";
 import Footer from "./Footer";
 import FeaturesSection from "./HomeComponents/FeaturesSection";
+import { Slide } from "react-awesome-reveal";
 
 
 
@@ -14,7 +15,9 @@ export default function HomePage() {
             <Header />
             <HeroSection />
             <BenefitsSection />
+            <Slide triggerOnce direction="up">
             <FeaturesSection />
+            </Slide>
             <QuestionsSection />
             <Footer />
         </div>
