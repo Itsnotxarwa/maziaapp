@@ -1,4 +1,4 @@
-import { Clock, Zap, HandHeart, ChartNoAxesCombined } from "lucide-react";
+import { Clock, Zap, HandHeart, TrendingUp } from "lucide-react";
 
 export const benefits = [
   {
@@ -17,7 +17,7 @@ export const benefits = [
     title: "Réduction des coûts",
     description:
       "Économisez sur les salaires et charges sociales tout en améliorant l'efficacité de votre accueil téléphonique.",
-    icon: ChartNoAxesCombined,
+    icon: TrendingUp,
   },
   {
     title: "Satisfaction client",
