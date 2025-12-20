@@ -27,7 +27,7 @@ export default function HeroSection() {
                                 <Fade direction="up" triggerOnce duration={800} delay={400}>
                                 <div className="mt-16">
                                 <a
-                                href="https://calendly.com/marwa-kchkh/demo-mazia-agent-ia-pour-les-appels"
+                                href="https://calendly.com/marwakouachkhia/demo-mazia-agent-ia-pour-les-appels"
                                 target="_blank"
                                 rel="noopener noreferrer">
                                 <button className="relative overflow-hidden flex items-center justify-center 
