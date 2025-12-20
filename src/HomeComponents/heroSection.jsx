@@ -26,7 +26,10 @@ export default function HeroSection() {
                                 </div>
                                 <Fade direction="up" triggerOnce duration={800} delay={400}>
                                 <div className="mt-16">
-                                <Link to="/demo">
+                                <a
+                                href="https://calendly.com/marwa-kchkh/demo-mazia-agent-ia-pour-les-appels"
+                                target="_blank"
+                                rel="noopener noreferrer">
                                 <button className="relative overflow-hidden flex items-center justify-center 
                                 gap-3 text-sm font-medium h-11  whitespace-nowrap rounded-md cursor-pointer
                                 bg-linear-to-r from-[#A068C1] to-[#BD3E69] px-8 py-2 
@@ -42,7 +45,7 @@ export default function HeroSection() {
                                         </li>
                                     </ul> 
                                 </button>
-                                </Link>
+                                </a>
                                 </div>
                                 </Fade>
                             </div>

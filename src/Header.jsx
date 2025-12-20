@@ -22,8 +22,6 @@ export default function Header() {
                                     Se connecter
                                 </button>
                                 <Link 
-                                to="/contact" 
-                                data-testid="contact-btn"
                                 className="group relative text-sm font-medium h-9 text-white whitespace-nowrap rounded-lg 
                                 bg-linear-to-r from-[#A068C1] to-[#BD3E69] px-4 py-2 
                                 transform transition-transform duration-300 hover:scale-105 cursor-pointer"
