@@ -67,7 +67,7 @@ export default function FeaturesSection() {
                                             <p className="text-lg text-white/60 max-w-2xl tracking-tighter">Automatisez vos appels et suivez les performances en temps réel.</p>
                                         </div>
                                         <div>
-                                            <a href="" className="group flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2 rounded-xl font-medium transition-all text-sm cursor-pointer">
+                                            <a href="/demo" className="group flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2 rounded-xl font-medium transition-all text-sm cursor-pointer">
                                                 Essayez Mazia et transformez la gestion de vos appels
                                                 <ArrowRight size={18} className="transition duration-300 group-hover:translate-x-2" />
                                             </a>
