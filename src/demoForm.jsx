@@ -91,7 +91,7 @@ export default function DemoForm() {
                 {serverError}
             </p>
         )}
-        <div className="p-8 flex items-center justify-center text-left">
+        <div className="lg:p-8 lg:flex items-center justify-center text-left">
         <form action="" className="space-y-4" onSubmit={handleCall}>
             <div className="w-full grid grid-cols-2 gap-4">
                 <div className="space-y-1 flex flex-col">

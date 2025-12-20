@@ -28,8 +28,8 @@ export default function Demo() {
         <div className="min-h-screen bg-black/90 text-white overflow-hidden">
             <Header />
             <section className="py-24">
-                <div className="space-x-6 flex flex-col lg:flex-row space-y-6 justify-between mx-12">
-                    <div className="max-w-xl">
+                <div className="space-x-6 flex flex-col lg:flex-row space-y-6 justify-between mx-6 lg:mx-12">
+                    <div className="lg:max-w-xl">
                         <div>
                             <h1 className="text-4xl md:text-5xl font-medium leading-tight mb-8 tracking-tight ">
                                 Faites-vous appeler 
@@ -38,7 +38,7 @@ export default function Demo() {
                             </h1>
                             <p className="text-white/60 text-lg">Renseignez vos coordonnées et notre agent conversationnel vous rappellera  pour vous présenter nos solutions et répondre à toutes vos questions.</p>
                         </div>
-                        <div className="space-y-6 p-8 ">
+                        <div className="space-y-6 p-4 lg:p-8 ">
                                 {rules.map((item,i) => {
                                     const Icon = item.icon;
                                     return(
