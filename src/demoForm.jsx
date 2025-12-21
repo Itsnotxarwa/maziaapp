@@ -199,7 +199,7 @@ export default function DemoForm() {
             </div>
                 <div className="flex items-center justify-center">
                     <ReCAPTCHA
-                    sitekey="6LeetDIsAAAAAOk_mTsyOp-zX6xMuM8I57DnCvPO"
+                    sitekey="6LcZvzIsAAAAAMPJ7PMbSXGANrdFRDsupQXyBoor"
                     ref={recaptchaRef}
                     onChange={() => setCaptchaDone(true)}
                     />
