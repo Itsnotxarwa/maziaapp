@@ -39,7 +39,7 @@ export default function DemoForm() {
             return;
         }
     
-        const response = await fetch("https://api.voixup.fr/calls/verify_captcha_calls_verify_captcha_post", {
+        const response = await fetch("https://api.voixup.fr/calls/verify-captcha", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -57,7 +57,7 @@ export default function DemoForm() {
     
         // faire un appele
         try{
-            const res = await fetch("https://api.voixup.fr/calls/make_outbound_call_calls_demo_outbound_call_post", {
+            const res = await fetch("https://api.voixup.fr/calls/demo-outbound-call", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
