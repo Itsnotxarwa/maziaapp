@@ -33,8 +33,13 @@ export default function DemoForm() {
     
     const token = await recaptchaRef.current.getValue();
         console.log("TOKEN SENT TO BACKEND:", token);
+
+        if (!token) {
+            setServerError("Captcha invalide.");
+            return;
+        }
     
-        const response = await fetch("https://api.voixup.fr/docs#/calls/verify_captcha_calls_verify_captcha_post", {
+        const response = await fetch("https://api.voixup.fr/calls/verify_captcha_calls_verify_captcha_post", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -42,7 +47,7 @@ export default function DemoForm() {
             body: JSON.stringify({ token }),
         });
 
-        if (!token.ok) {
+        if (!response.ok) {
             setServerError("Captcha invalide.");
             return;
         }
@@ -52,7 +57,7 @@ export default function DemoForm() {
     
         // faire un appele
         try{
-            const res = await fetch("https://api.voixup.fr/docs#/calls/make_outbound_call_calls_demo_outbound_call_post", {
+            const res = await fetch("https://api.voixup.fr/calls/make_outbound_call_calls_demo_outbound_call_post", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
