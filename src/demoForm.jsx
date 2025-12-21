@@ -34,7 +34,7 @@ export default function DemoForm() {
     const token = await recaptchaRef.current.getValue();
         console.log("TOKEN SENT TO BACKEND:", token);
     
-        const response = await fetch("http://3.88.182.81:8000/calls/verify-captcha", {
+        const response = await fetch("https://api.voixup.fr/docs#/calls/verify_captcha_calls_verify_captcha_post", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -52,7 +52,7 @@ export default function DemoForm() {
     
         // faire un appele
         try{
-            const res = await fetch("http://3.88.182.81:8000/calls/demo-outbound-call", {
+            const res = await fetch("https://api.voixup.fr/docs#/calls/make_outbound_call_calls_demo_outbound_call_post", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -194,7 +194,7 @@ export default function DemoForm() {
             </div>
                 <div className="flex items-center justify-center">
                     <ReCAPTCHA
-                    sitekey="6LeC-hUsAAAAAKjMZmZsKteg9i7KsCskgubtDq4E"
+                    sitekey="6LcigjIsAAAAAJY20aBzEU8Nbc-guXaKCC-ZH9Ti"
                     ref={recaptchaRef}
                     onChange={() => setCaptchaDone(true)}
                     />
