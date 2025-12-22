@@ -28,8 +28,8 @@ export default function Demo() {
         <div className="min-h-screen bg-black/90 text-white overflow-hidden">
             <Header />
             <section className="py-24">
-                <div className="space-x-6 flex flex-col lg:flex-row space-y-6 justify-between mx-6 lg:mx-12">
-                    <div className="lg:max-w-xl">
+                <div className="space-x-6 grid grid-cols-1 md:grid-cols-2 space-y-6  mx-6 lg:mx-12">
+                    <div className="">
                         <div>
                             <h1 className="text-4xl md:text-5xl font-medium leading-tight mb-8 tracking-tight ">
                                 Faites-vous appeler 

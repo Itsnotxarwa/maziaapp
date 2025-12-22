@@ -6,9 +6,10 @@ import { ChevronDown } from "lucide-react";
 
 
 export default function DemoForm() {
+    const [loading, setLoading] = useState(false);
+
     const recaptchaRef = React.useRef(); 
     const [captchaDone, setCaptchaDone] = useState(false);
-    
     
     const [serverError, setServerError] = useState("");
     
@@ -30,12 +31,14 @@ export default function DemoForm() {
     
     const handleCall = async(e) => {
         e.preventDefault();
+        setLoading(true);
     
     const token = await recaptchaRef.current.getValue();
         console.log("TOKEN SENT TO BACKEND:", token);
 
         if (!token) {
             setServerError("Captcha invalide.");
+            setLoading(false);
             return;
         }
     
@@ -49,6 +52,7 @@ export default function DemoForm() {
 
         if (!response.ok) {
             setServerError("Captcha invalide.");
+            setLoading(false);
             return;
         }
         
@@ -74,6 +78,7 @@ export default function DemoForm() {
                 setServerError("Service indisponible. Veuillez réessayer plus tard.");
                 resetForm();
                 setTimeout(() => setServerError(""),5000);
+                setLoading(false);
                 return;
             }
             
@@ -81,11 +86,13 @@ export default function DemoForm() {
             console.log(data);
             resetForm();
             setServerError("");
+            setLoading(false);
         
         }catch (error) {
             console.error(error);
             setServerError("Service indisponible. Veuillez réessayer plus tard.");
             resetForm();
+            setLoading(false);
             setTimeout(() => setServerError(""),5000);
         }
             }
@@ -205,6 +212,7 @@ export default function DemoForm() {
                     />
                 </div>
                 <div className="flex items-center justify-center">
+                {!loading ? ( 
                     <button 
                     type="submit"
                     disabled={
@@ -221,7 +229,21 @@ export default function DemoForm() {
                     `}
                     >
                         Se faire appeler
-                    </button>
+                    </button> ) : (
+                    <div aria-label="Loading..." role="status" className="loader">
+                        <svg clasName="icon" viewBox="0 0 256 256">
+                            <line x1="128" y1="32" x2="128" y2="64" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+                            <line x1="195.9" y1="60.1" x2="173.3" y2="82.7" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+                            <line x1="224" y1="128" x2="192" y2="128" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+                            <line x1="195.9" y1="195.9" x2="173.3" y2="173.3" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+                            <line x1="128" y1="224" x2="128" y2="192" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+                            <line x1="60.1" y1="195.9" x2="82.7" y2="173.3" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+                            <line x1="32" y1="128" x2="64" y2="128" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+                            <line x1="60.1" y1="60.1" x2="82.7" y2="82.7" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+                        </svg>
+                        <span className="loading-text">Veuillez patienter, vous allez recevoir un appel.</span>
+                    </div>
+                    )}
                 </div>
             </form>
         </div>
