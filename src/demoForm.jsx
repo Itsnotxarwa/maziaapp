@@ -211,8 +211,8 @@ export default function DemoForm() {
                     onChange={() => setCaptchaDone(true)}
                     />
                 </div>
-                <div className="flex items-center justify-center">
-                {!loading ? ( 
+                <div className="flex flex-col items-center justify-center">
+                {!loading ? (
                     <button 
                     type="submit"
                     disabled={
@@ -229,21 +229,15 @@ export default function DemoForm() {
                     `}
                     >
                         Se faire appeler
-                    </button> ) : (
-                    <div aria-label="Loading..." role="status" className="loader">
-                        <svg clasName="icon" viewBox="0 0 256 256">
-                            <line x1="128" y1="32" x2="128" y2="64" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
-                            <line x1="195.9" y1="60.1" x2="173.3" y2="82.7" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
-                            <line x1="224" y1="128" x2="192" y2="128" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
-                            <line x1="195.9" y1="195.9" x2="173.3" y2="173.3" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
-                            <line x1="128" y1="224" x2="128" y2="192" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
-                            <line x1="60.1" y1="195.9" x2="82.7" y2="173.3" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
-                            <line x1="32" y1="128" x2="64" y2="128" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
-                            <line x1="60.1" y1="60.1" x2="82.7" y2="82.7" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"></line>
+                    </button>
+                ) : (
+                    <div className="flex items-center gap-3">
+                        <svg viewBox="25 25 50 50">
+                            <circle r="20" cy="50" cx="50"></circle>
                         </svg>
-                        <span className="loading-text">Veuillez patienter, vous allez recevoir un appel.</span>
+                        <span className="text-lg">Veuillez patienter, vous allez recevoir un appel.</span>
                     </div>
-                    )}
+                )}
                 </div>
             </form>
         </div>

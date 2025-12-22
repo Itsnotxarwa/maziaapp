@@ -310,27 +310,40 @@ html::-webkit-scrollbar-thumb {
   }
 }
 
-.loader {
-  display: flex;
-  align-items: center;
+svg {
+ width: 3.25em;
+ transform-origin: center;
+ animation: rotate4 2s linear infinite;
 }
 
-.icon {
-  height: 1.5rem;
-  width: 1.5rem;
-  animation: spin 1s linear infinite;
-  stroke: rgba(107, 114, 128, 1);
+circle {
+ fill: none;
+ stroke: hsl(214, 97%, 59%);
+ stroke-width: 2;
+ stroke-dasharray: 1, 200;
+ stroke-dashoffset: 0;
+ stroke-linecap: round;
+ animation: dash4 1.5s ease-in-out infinite;
 }
 
-.loading-text {
-  font-size: 0.75rem;
-  line-height: 1rem;
-  font-weight: 500;
-  color: rgba(107, 114, 128, 1);
+@keyframes rotate4 {
+ 100% {
+  transform: rotate(360deg);
+ }
 }
 
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes dash4 {
+ 0% {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+ }
+
+ 50% {
+  stroke-dasharray: 90, 200;
+  stroke-dashoffset: -35px;
+ }
+
+ 100% {
+  stroke-dashoffset: -125px;
+ }
 }
