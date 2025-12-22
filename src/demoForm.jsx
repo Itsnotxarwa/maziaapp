@@ -231,8 +231,8 @@ export default function DemoForm() {
                         Se faire appeler
                     </button>
                 ) : (
-                    <div className="flex items-center gap-3">
-                        <svg viewBox="25 25 50 50">
+                    <div className="flex items-center gap-3  w-5 h-5">
+                        <svg className="loading-svg" viewBox="25 25 50 50">
                             <circle r="20" cy="50" cx="50"></circle>
                         </svg>
                         <span className="text-lg">Veuillez patienter, vous allez recevoir un appel.</span>
