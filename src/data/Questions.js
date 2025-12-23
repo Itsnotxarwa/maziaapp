@@ -1,7 +1,7 @@
 export const question =[
     {
         id: 1,
-        question: "Comment MAZ gère-t-il les appels complexes ?",
+        question: "Comment MAZIA gère-t-il les appels complexes ?",
         answer: "L’IA détecte les scénarios complexes et peut transférer l’appel à un humain."
     },
     {
