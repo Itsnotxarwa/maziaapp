@@ -12,7 +12,7 @@ export default function QuestionsSection() {
 
     return(
         <Fade triggerOnce direction="up" duration={800}>
-        <section className="relative pt-24 pb-48 sm:mx-4">
+        <section className="relative py-24 sm:mx-4">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
                     <div className="text-center space-y-4 mb-10">
                         <h3 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-1">FAQ.</h3>

@@ -1,5 +1,5 @@
 import { benefits } from "../data/BenefitsData";
-import { Slide } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 import GradientIcon from "../components/GradientIcon";
 
 export default function BenefitsSection() {
@@ -9,15 +9,22 @@ export default function BenefitsSection() {
             <div className="max-w-7xl mx-auto px-8 sm:px-6 lg:px-16">
                 <div className="flex items-center justify-center mb-20">
                   <div className="space-y-4">
+                    <Fade triggerOnce direction='up' duration={1000} delay={200}>
                     <h2 className="text-lg text-center uppercase text-white/60 mb-4">Pourquoi choisir Mazia ?</h2>
-                    <h2 className="text-2xl text-white font-medium mb-8 text-center">
+                    </Fade>
+                    <Fade triggerOnce direction='up' duration={1000} delay={400}>
+                    <h2 className="text-3xl md:text-4xl text-white font-medium mb-8 text-center">
                         Les bénéfices essentiels de Mazia pour transformer votre entreprise
                     </h2>
+                    </Fade>
+                    <Fade triggerOnce direction='up' duration={1000} delay={600}>
                     <p className="text-xl mb-6 text-center text-gray-50/50">
                     Mazia n’est pas seulement un outil d’automatisation : c’est un véritable levier stratégique qui révolutionne la gestion des appels commerciaux et l’expérience client.
                     </p>
+                    </Fade>
                   </div>
                 </div>
+                <Fade triggerOnce direction='up' duration={1000} delay={800}>
                 <div className="flex-1">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-2">
             {benefits.map((item, i) => {
@@ -43,6 +50,7 @@ export default function BenefitsSection() {
             })}
           </div>
           </div>
+          </Fade>
         </div>
           </section>
     )

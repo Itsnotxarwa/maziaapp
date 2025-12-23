@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import FeaturesSection from "./HomeComponents/FeaturesSection";
 import { Slide } from "react-awesome-reveal";
 import UsageExamples from "./HomeComponents/UsageExamples";
+import RequestDemo from "./HomeComponents/RequestDemo";
 
 
 
@@ -21,6 +22,7 @@ export default function HomePage() {
             </Slide>
             <UsageExamples />
             <QuestionsSection />
+            <RequestDemo />
             <Footer />
         </div>
     )
