@@ -1,6 +1,5 @@
 import { Fade } from "react-awesome-reveal";
 import { ArrowRight, ArrowUpRight  } from "lucide-react";
-import { Link } from "react-router-dom"; 
 import DashboardImage from '../assets/dashboard.png';
 
 export default function HeroSection() {
@@ -25,22 +24,33 @@ export default function HeroSection() {
                                     </Fade>
                                 </div>
                                 <Fade direction="up" triggerOnce duration={800} delay={400}>
-                                <div className="mt-16">
+                                <div className="mt-16 flex gap-4 items-center justify-center">
+                                <a
+                                href="/demo"
+                                >
+                                <button className="relative overflow-hidden flex items-center justify-center 
+                                gap-3 text-sm font-medium h-11  whitespace-nowrap rounded-[30px] cursor-pointer
+                                bg-linear-to-r from-[#A068C1] to-[#BD3E69] px-8 py-2 
+                                transition-all duration-300 transform  hover:scale-105 group">
+                                    Essayez Mazia
+                                </button>
+                                </a>
+
                                 <a
                                 href="https://calendly.com/marwakouachkhia/demo-mazia-agent-ia-pour-les-appels"
                                 target="_blank"
                                 rel="noopener noreferrer">
-                                <button className="relative overflow-hidden flex items-center justify-center 
-                                gap-3 text-sm font-medium h-11  whitespace-nowrap rounded-md cursor-pointer
-                                bg-linear-to-r from-[#A068C1] to-[#BD3E69] px-8 py-2 
-                                transition-all duration-300 transform  hover:scale-105 group">
+                                <button className="relative border border-white/60 overflow-hidden flex items-center justify-center 
+                                gap-3 text-sm font-medium  whitespace-nowrap rounded-[30px] cursor-pointer
+                                px-8 py-2 h-11  bg-[#1a1a1a] text-white 
+                                transition-all duration-400 transform  hover:scale-105 group boton-elegante">
                                     <ul className="relative h-6 overflow-hidden">
                                         <li className="flex items-center transform transition-transform duration-300 group-hover:-translate-y-full">
-                                            prendre un rendez-vous
+                                            Prendre rendez-vous
                                             <ArrowUpRight size={22} />
                                         </li>
                                         <li className="flex items-center transform transition-transform translate-y-0 duration-300 group-hover:-translate-y-full">
-                                            prendre un rendez-vous
+                                            Prendre rendez-vous
                                             <ArrowRight size={22} />
                                         </li>
                                     </ul> 
