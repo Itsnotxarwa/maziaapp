@@ -29,11 +29,14 @@ export default function BenefitsSection() {
                   bg-white border border-white/10 transition-all duration-500
                   overflow-hidden flex flex-col justify-center hover:scale-95"
                 >
+                  <div className="absolute backdrop-blur-md inset-0 bg-linear-to-r from-[#A068C1]/10 to-[#BD3E69]/10"></div>
+                  <div className="z-50">
                   <div className="flex justify-start mb-6 text-black">
                     <GradientIcon Icon={Icon} id={i} />
                   </div>
                   <h3 className="text-xl font-semibold mb-4 bg-linear-to-r from-[#A068C1] to-[#BD3E69] text-transparent bg-clip-text">{item.title}</h3>
                   <p className="text-black/70">{item.description}</p>
+                  </div>
                 </div>
               );
             })}
