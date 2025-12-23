@@ -6,6 +6,7 @@ import { ChevronDown } from "lucide-react";
 
 
 export default function DemoForm() {
+
     const [loading, setLoading] = useState(false);
 
     const recaptchaRef = React.useRef(); 
@@ -17,8 +18,26 @@ export default function DemoForm() {
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [phoneNumber, setPhoneNumber] = useState("");
+    const [phoneError, setPhoneError] = useState("");
+
+    const validatePhone = () => {
+        const isValid = /^[0-9]{8,15}$/.test(phoneNumber);
+        setPhoneError(isValid ? "" : "Numéro invalide");
+        return isValid;
+    }
+
     const [selectedCountry, setSelectedCountry] = useState(allCountries[0]);
     const [dropdownOpen, setDropdownOpen] = useState(false);
+
+    React.useEffect(() => {
+    const handleClickOutside = (e) => {
+        if (!e.target.closest('.dropdown-container')) {
+            setDropdownOpen(false);
+        }
+    };
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+}, []);
     
     const resetForm = () => {
         setFirstName("");
@@ -32,6 +51,11 @@ export default function DemoForm() {
     const handleCall = async(e) => {
         e.preventDefault();
         setLoading(true);
+
+        if (!validatePhone()) {
+            setLoading(false);
+            return;
+        }
     
     const token = await recaptchaRef.current.getValue();
         console.log("TOKEN SENT TO BACKEND:", token);
@@ -154,7 +178,7 @@ export default function DemoForm() {
                     onChange={(e) => setEmail(e.target.value)}
                     />
                 </div>
-                <div className="w-full space-y-1 flex flex-col">
+                <div className="w-full space-y-1 flex flex-col dropdown-container">
                     <label 
                     htmlFor="phone_number" 
                     className="text-sm text-white font-medium">
@@ -181,7 +205,11 @@ export default function DemoForm() {
                     border border-gray-300 pl-18 bg-white placeholder:text-gray-500 text-sm text-gray-900
                     focus:border-[#BD3E69] focus-visible:outline-none"
                     value={phoneNumber}
-                    onChange={(e) => setPhoneNumber(e.target.value)}
+                    onChange={(e) => {
+                        let value = e.target.value.replace(/\D/g, "");
+                        if (value.startsWith("0")) value = value.slice(1);
+                        setPhoneNumber(value);
+                    }}
                 />
                 
                 {/* Dropdown menu */}
@@ -204,6 +232,7 @@ export default function DemoForm() {
             )}
             </div>
             </div>
+             {phoneError && <p style={{ color: "red" }}>{phoneError}</p>}
                 <div className="flex items-center justify-center">
                     <ReCAPTCHA
                     sitekey="6LcZvzIsAAAAAMPJ7PMbSXGANrdFRDsupQXyBoor"
@@ -220,10 +249,11 @@ export default function DemoForm() {
                         !lastName ||
                         !email ||
                         !phoneNumber ||
-                        !captchaDone
+                        !captchaDone ||
+                        phoneError
                     }
                     className={`h-11 px-8 py-2 rounded-md text-sm 
-                    ${(!firstName || !lastName || !email || !phoneNumber || !captchaDone)
+                    ${(!firstName || !lastName || !email || !phoneNumber || !captchaDone || phoneError)
                     ? "bg-gray-300 text-gray-700 opacity-50 cursor-not-allowed"
                     : "bg-transparent border border-white hover:bg-white hover:text-black transition-all duration-300 font-medium hover:scale-105 text-white cursor-pointer"}
                     `}
@@ -231,11 +261,9 @@ export default function DemoForm() {
                         Se faire appeler
                     </button>
                 ) : (
-                    <div className="flex items-center gap-3  w-5 h-5">
-                        <svg className="loading-svg" viewBox="25 25 50 50">
-                            <circle r="20" cy="50" cx="50"></circle>
-                        </svg>
-                        <span className="text-lg">Veuillez patienter, vous allez recevoir un appel.</span>
+                    <div className="flex items-center gap-3">
+                        <div class="loader"></div>
+                        <span className="text-lg text-white/60">Veuillez patienter, vous allez recevoir un appel.</span>
                     </div>
                 )}
                 </div>

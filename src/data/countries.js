@@ -1,4 +1,5 @@
 export const allCountries = [
+  {"country":"France","code":"33","iso":"FR"},
   {"country":"Afghanistan","code":"93","iso":"AF"},
   {"country":"Albania","code":"355","iso":"AL"},
   {"country":"Algeria","code":"213","iso":"DZ"},
@@ -71,7 +72,6 @@ export const allCountries = [
 {"country":"Faroe Islands","code":"298","iso":"FO"},
 {"country":"Fiji","code":"679","iso":"FJ"},
 {"country":"Finland","code":"358","iso":"FI"},
-{"country":"France","code":"33","iso":"FR"},
 {"country":"French Polynesia","code":"689","iso":"PF"},
 {"country":"Gabon","code":"241","iso":"GA"},
 {"country":"Gambia","code":"220","iso":"GM"},
