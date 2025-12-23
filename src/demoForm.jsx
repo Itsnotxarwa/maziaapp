@@ -262,7 +262,7 @@ export default function DemoForm() {
                     </button>
                 ) : (
                     <div className="flex items-center gap-3">
-                        <div class="loader"></div>
+                        <div class="circle-loader"></div>
                         <span className="text-lg text-white/60">Veuillez patienter, vous allez recevoir un appel.</span>
                     </div>
                 )}
