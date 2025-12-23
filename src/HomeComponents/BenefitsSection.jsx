@@ -25,13 +25,14 @@ export default function BenefitsSection() {
               return (
                 <div
                   key={i}
-                  className="h-78 md:h-69 lg:h-80 p-8 text-left relative z-10 rounded-lg shadow-sm 
-                  bg-white border border-white/10 transition-all duration-500
-                  overflow-hidden flex flex-col justify-center hover:scale-95"
+                  className="group h-78 md:h-69 lg:h-80 p-8 text-left relative z-10 rounded-lg
+                  bg-white border border-gray-200 transition-all duration-500
+                  overflow-hidden flex flex-col justify-center"
                 >
-                  <div className="absolute backdrop-blur-md inset-0 bg-linear-to-r from-[#A068C1]/10 to-[#BD3E69]/10"></div>
+                  <div className="absolute opacity-0 group-hover:opacity-100 transition-opacity duration-500 
+                  backdrop-blur-md inset-0 bg-linear-to-r from-[#A068C1]/5 to-[#BD3E69]/5"></div>
                   <div className="z-50">
-                  <div className="flex justify-start mb-6 text-black">
+                  <div className="flex justify-start mb-6 text-black group-hover:scale-105">
                     <GradientIcon Icon={Icon} id={i} />
                   </div>
                   <h3 className="text-xl font-semibold mb-4 bg-linear-to-r from-[#A068C1] to-[#BD3E69] text-transparent bg-clip-text">{item.title}</h3>
