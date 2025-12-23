@@ -12,7 +12,7 @@ export default function QuestionsSection() {
 
     return(
         <Fade triggerOnce direction="up" duration={800}>
-        <section className="relative py-24 sm:mx-4">
+        <section className="relative pt-24 pb-48 sm:mx-4">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
                     <div className="text-center space-y-4 mb-10">
                         <h3 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-1">FAQ.</h3>
@@ -29,7 +29,7 @@ export default function QuestionsSection() {
                             className="w-full flex items-center justify-between px-5 py-4 text-left"
                             onClick={() => toggle(i)}>
                                 <div className="flex items-center gap-6">
-                                    <span className="text-sm text-gray-50/50 group-hover:text-gray-50">(00{item.id})</span>
+                                    <span className="text-sm text-gray-50/50 group-hover:text-gray-50">(0{item.id})</span>
                                     <h3 className="text-white font-medium md:text-lg text-base">{item.question}</h3>
                                 </div>
                                 <div className="shrink-0 flex items-center justify-center h-6 w-6 rounded-full 
